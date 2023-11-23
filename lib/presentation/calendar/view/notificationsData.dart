@@ -9,13 +9,16 @@ class ShowLiveMatches extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 30, 37, 254),
-      body: SafeArea(
-        bottom: false,
-        child: InAppWebView(
-          initialUrlRequest: URLRequest(
-            url: Uri.parse(matches),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 30, 37, 254),
+        body: SafeArea(
+          bottom: false,
+          child: InAppWebView(
+            initialUrlRequest: URLRequest(
+              url: Uri.parse(matches),
+            ),
           ),
         ),
       ),

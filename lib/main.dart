@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .15,
                       width: MediaQuery.of(context).size.width * .75,
                       child: Image.asset(
-                        'assets/images/logo.png',
+                        'assets/images/1024.png',
                         fit: BoxFit.contain,
                       ),
                     ),

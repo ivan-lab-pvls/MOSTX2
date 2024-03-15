@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:most_sport/widgets/other/data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-String? showBx;
+String showBx = '';
 class DataRepository {
   final String apiKey = '6b5e993ad23a4d155b992de4e5db82a6';
   final String apiHost = 'v3.football.api-sports.io';

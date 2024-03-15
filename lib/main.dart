@@ -26,12 +26,9 @@ Future<void> main() async {
     minimumFetchInterval: const Duration(seconds: 1),
   ));
   await NotificationServiceFb().activate();
-  final bool fdsaxsa = await asdgfdscdsg();
   prefs = await SharedPreferences.getInstance();
   runApp(MyApp(isOnBoarding: isOnBoarding));
 }
-
-
 
 class MyApp extends StatelessWidget {
   final bool isOnBoarding;
@@ -40,18 +37,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (showBx != null) {
-      return ShowLiveMatches(
-        matches: showBx!,
-      );
-    }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FutureBuilder(
-        future: Future.delayed(const Duration(seconds: 4)),
+        future: asdgfdscdsg(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return isOnBoarding ? MyHomePage() : const OnBoardingScreen();
+          } else if (snapshot.data == true && showBx != '') {
+            return ShowLiveMatches(
+              matches: showBx,
+            );
           } else {
             return Scaffold(
               backgroundColor: const Color(0xFF053F7B),

@@ -60,11 +60,14 @@ class MyApp extends StatelessWidget {
                       height: 120,
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * .15,
-                      width: MediaQuery.of(context).size.width * .75,
-                      child: Image.asset(
-                        'assets/images/1024.png',
-                        fit: BoxFit.contain,
+                      height: 75,
+                      width: 75,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          'assets/images/1024.png',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                     const SizedBox(

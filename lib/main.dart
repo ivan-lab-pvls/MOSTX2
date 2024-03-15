@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: FutureBuilder(
-        future: Future.delayed(const Duration(seconds: 3)),
+        future: Future.delayed(const Duration(seconds: 4)),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return isOnBoarding ? MyHomePage() : const OnBoardingScreen();

@@ -48,6 +48,10 @@ dependencies:
   firebase_analytics: ^10.6.3
   json_annotation:
   permission_handler:
+  affise_attribution_lib:
+    git:
+      url: https://github.com/affise/flutter-sdk
+  app_tracking_transparency:
   image_picker:
   path_provider:
   cupertino_icons: ^1.0.2

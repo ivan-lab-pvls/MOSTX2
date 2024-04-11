@@ -1,3 +1,4 @@
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ late SharedPreferences prefs;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await isCallStars();
+  await das();
   preferences = await SharedPreferences.getInstance();
   bool isOnBoarding = preferences.getBool('onBoarding') ?? false;
   await Firebase.initializeApp(options: DefFire.currentPlatform);
@@ -28,6 +30,12 @@ Future<void> main() async {
   await NotificationServiceFb().activate();
   prefs = await SharedPreferences.getInstance();
   runApp(MyApp(isOnBoarding: isOnBoarding));
+}
+
+Future<void> das() async {
+  final TrackingStatus status =
+      await AppTrackingTransparency.requestTrackingAuthorization();
+  print(status);
 }
 
 class MyApp extends StatelessWidget {

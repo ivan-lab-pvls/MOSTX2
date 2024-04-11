@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:intl/intl.dart';
+import 'package:most_sport/constants.dart';
 import 'package:most_sport/presentation/match_board/data/data.dart';
 
 String getCurrentDate() {
@@ -23,14 +24,13 @@ Future<bool> checkxa(String onBoarding, String gex) async {
 
   if (response.statusCode == HttpStatus.movedTemporarily ||
       response.statusCode == HttpStatus.movedPermanently) {
-   
     if (response.headers
         .value(HttpHeaders.locationHeader)
         .toString()
         .contains(gex)) {
       return false;
     } else {
-      showBx = onBoarding;
+      showBx = '$onBoarding&affise_device_id=$uuid&campaignid=$campaign';
       return true;
     }
   } else {

@@ -1,4 +1,18 @@
 PODS:
+  - affise_attribution_lib (1.0.0):
+    - AffiseInternal (= 1.6.27)
+    - Flutter
+  - AffiseAttributionLib (1.6.27)
+  - AffiseInternal (1.6.27):
+    - AffiseAttributionLib (= 1.6.27)
+    - AffiseSKAdNetwork (= 1.6.27)
+  - AffiseModule/Advertising (1.6.27):
+    - AffiseAttributionLib (= 1.6.27)
+  - AffiseModule/Status (1.6.27):
+    - AffiseAttributionLib (= 1.6.27)
+  - AffiseSKAdNetwork (1.6.27)
+  - app_tracking_transparency (0.0.1):
+    - Flutter
   - Firebase/Analytics (10.16.0):
     - Firebase/Core
   - Firebase/Core (10.16.0):
@@ -151,6 +165,10 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - affise_attribution_lib (from `.symlinks/plugins/affise_attribution_lib/ios`)
+  - AffiseModule/Advertising (= 1.6.27)
+  - AffiseModule/Status (= 1.6.27)
+  - app_tracking_transparency (from `.symlinks/plugins/app_tracking_transparency/ios`)
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
@@ -168,6 +186,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AffiseAttributionLib
+    - AffiseInternal
+    - AffiseModule
+    - AffiseSKAdNetwork
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -184,6 +206,10 @@ SPEC REPOS:
     - PromisesObjC
 
 EXTERNAL SOURCES:
+  affise_attribution_lib:
+    :path: ".symlinks/plugins/affise_attribution_lib/ios"
+  app_tracking_transparency:
+    :path: ".symlinks/plugins/app_tracking_transparency/ios"
   firebase_analytics:
     :path: ".symlinks/plugins/firebase_analytics/ios"
   firebase_core:
@@ -214,6 +240,12 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
+  affise_attribution_lib: d816d52c05fc15d6ac9743eb7a4bb5ec2789e5b2
+  AffiseAttributionLib: 7ef8b9f1c6af2ba1c300c3e84f8cf3c07c61e3ba
+  AffiseInternal: d8b20f4ec06936485ac7610795ee1e58789cc47f
+  AffiseModule: 5b1945238a2f0b4deae394348caf5a93b56597df
+  AffiseSKAdNetwork: 35f4279bc6ce253ce4328c34acf72e0bdbbbdb9f
+  app_tracking_transparency: 5b1745ef9ade815f7455cb6a0848349589afb7c5
   Firebase: 25899099b77d255a636e3579c3d9dce10ec150d5
   firebase_analytics: 6b9cf6da9b2e38ace14482bd29e099b25abac4ad
   firebase_core: 68027ba03585e3efe1608e35d3ab2777a64eabe9
@@ -243,6 +275,6 @@ SPEC CHECKSUMS:
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   url_launcher_ios: 68d46cc9766d0c41dbdc884310529557e3cd7a86
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: d78e237597ad193451e96449541f0799ee2d5993
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.15.2
